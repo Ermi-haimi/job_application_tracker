@@ -17,7 +17,7 @@ export default function ApplicationCard({ application }: ApplicationCardProps) {
         <p>{application.salary ?? "Note Specified"}</p>
       </div>
       <div className="note-wrapper">
-        <p>{application.notes ?? "No Note"}</p>
+        <p>{application.note ?? "No Note"}</p>
       </div>
       <div className="status-dates-wrapper">
         <div className="app-status">{application.status}</div>
