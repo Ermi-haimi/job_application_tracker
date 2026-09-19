@@ -1,5 +1,6 @@
 import type { JobApplication } from "../../types/application";
 import ApplicationCard from "../applicationCard/ApplicationCard";
+import "./ApplicationList.css";
 
 interface ApplicationListProps {
   applicationList: JobApplication[];
