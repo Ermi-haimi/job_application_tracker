@@ -1,0 +1,101 @@
+.add-application-form {
+  width: 100%;
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.add-application-form h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.add-application-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.add-application-form label span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.add-application-form input,
+.add-application-form select,
+.add-application-form textarea {
+  width: 100%;
+  padding: 11px 13px;
+  box-sizing: border-box;
+  font: inherit;
+  color: #1f2937;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-application-form input:focus,
+.add-application-form select:focus,
+.add-application-form textarea:focus {
+  border-color: #040c1e;
+  box-shadow: 0 0 0 3px rgba(3, 11, 26, 0.12);
+}
+
+.add-application-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.add-application-form label:has(textarea) {
+  grid-column: 1 / -1;
+}
+
+.add-application-form button {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 7px;
+  background-color: #000000;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.add-application-form button:hover {
+  background-color: #242424;
+}
+
+.add-application-form button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  .add-application-form {
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+    padding: 22px;
+    border-radius: 10px;
+  }
+}
