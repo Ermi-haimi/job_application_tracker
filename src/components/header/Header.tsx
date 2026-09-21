@@ -1,13 +1,16 @@
 import "./Header.css";
+import { NavLink } from "react-router";
 
 export default function Header() {
   return (
     <header className="header">
       <h1 className="header-title">Save That Job</h1>
-
-      <button className="add-button" type="button">
+      <NavLink className={"home-button"} to={"/"}>
+        Home
+      </NavLink>
+      <NavLink className="add-button" to={"/new_application"}>
         + Add Job
-      </button>
+      </NavLink>
     </header>
   );
 }
