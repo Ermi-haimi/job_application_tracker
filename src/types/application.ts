@@ -8,7 +8,7 @@ export type ApplicationStatus =
 export type JobType = "full-time" | "part-time" | "internship" | "contract";
 
 export type JobApplication = {
-  id: number;
+  id: string;
   company: string;
   position: string;
   location: string;
