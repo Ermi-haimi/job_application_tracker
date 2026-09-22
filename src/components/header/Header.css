@@ -43,3 +43,10 @@ a {
 .home-button:hover {
   background-color: #f3f3f3;
 }
+
+@media (max-width: 490px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
