@@ -4,11 +4,12 @@ import type {
   ApplicationStatus,
   JobType,
 } from "../../types/application";
+import { useApplication } from "../../context/UseApplication";
 import "./NewApplication.css";
-interface NewApplicationProps {
-  onAdd: (application: JobApplication) => void;
-}
-export default function NewApplication({ onAdd }: NewApplicationProps) {
+
+export default function NewApplication() {
+  const { addApplication } = useApplication();
+
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
   const [location, setLocation] = useState("");
@@ -34,7 +35,7 @@ export default function NewApplication({ onAdd }: NewApplicationProps) {
       dateApplied: status !== "saved" ? dateApplied || undefined : undefined,
     };
 
-    onAdd(newApplication);
+    addApplication(newApplication);
 
     setCompany("");
     setPosition("");

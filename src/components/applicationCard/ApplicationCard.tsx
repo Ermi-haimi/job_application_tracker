@@ -1,4 +1,6 @@
 import type { JobApplication } from "../../types/application";
+import { FaTrash } from "react-icons/fa";
+import { useApplication } from "../../context/UseApplication";
 import "./ApplicationCard.css";
 
 interface ApplicationCardProps {
@@ -6,6 +8,8 @@ interface ApplicationCardProps {
 }
 
 export default function ApplicationCard({ application }: ApplicationCardProps) {
+  const { deleteApplication } = useApplication();
+
   return (
     <section className="app-card-wrapper">
       <h3>{application.position}</h3>
@@ -35,6 +39,13 @@ export default function ApplicationCard({ application }: ApplicationCardProps) {
           <p>Deadline</p>
           <p>{application.deadline ?? ""}</p>
         </div>
+      </div>
+
+      <div className="app-card-delete">
+        <FaTrash
+          type="button"
+          onClick={() => deleteApplication(application.id)}
+        />
       </div>
     </section>
   );
