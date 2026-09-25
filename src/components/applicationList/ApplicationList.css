@@ -6,6 +6,16 @@
   padding: 10px;
 }
 
+.no-applications {
+  font-size: 2rem;
+  font-weight: 600;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+}
+
 @media (max-width: 900px) {
   .applications-wrapper {
     grid-template-columns: repeat(1, 1fr);

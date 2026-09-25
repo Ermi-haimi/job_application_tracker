@@ -11,9 +11,13 @@ export default function ApplicationList({
 }: ApplicationListProps) {
   return (
     <section className="applications-wrapper">
-      {applicationList.map((application) => (
-        <ApplicationCard key={application.id} application={application} />
-      ))}
+      {applicationList.length !== 0 ? (
+        applicationList.map((application) => (
+          <ApplicationCard key={application.id} application={application} />
+        ))
+      ) : (
+        <div className="no-applications">No Applications Yet</div>
+      )}
     </section>
   );
 }
