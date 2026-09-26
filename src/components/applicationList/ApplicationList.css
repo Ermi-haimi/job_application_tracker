@@ -9,9 +9,10 @@
 .no-applications {
   font-size: 2rem;
   font-weight: 600;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   color: brown;
